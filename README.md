@@ -14,10 +14,13 @@ Install require.js in node...
 Run the bot app using the auth/user/room of your bot (see links section for more detail)...  
 ``node app.js [auth] [userid] [roomid]``
 
+Structure
+=========
+app.js --> assembles/configures bot application using modules and ttapi.
+
 Known Issues
 ============
 This is sort of in beta... the autoreconnect feature isn't re-connecting.  
-Also the song limits don't appear to be enforced, more time is needed to sort that out.  
 Queueing is very basic.
 
 Links
