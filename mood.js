@@ -22,7 +22,7 @@ define(function() {
             var downvotes = metadata.downvotes;
             var listeners = metadata.listeners;
 
-            self.mood = self.moood + (upvotes - downvotes / listeners);
+            self.mood = self.mood + (upvotes - downvotes / listeners);
         });
     };
 
