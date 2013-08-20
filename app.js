@@ -89,6 +89,7 @@ requirejs(['ttapi', 'autoreconnect', 'bop', 'chat', 'autodj', 'cmd', 'fan', 'que
         var songLimit = new SongLimit({
             bot: bot,
             cmd: cmd,
+            userid: userid
         });
         songLimit.run();
 
