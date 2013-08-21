@@ -78,8 +78,14 @@ define(function() {
             // room.metadata.moderator_id (is an array)
             self.bot.roomInfo(false, function(roomInfo) {
 
+                console.log('moderatorid:');
+                console.log(roomInfo.room.metadata.moderator_id);
+
+                console.log('senderid:');
+                console.log(data.senderid);
+
                 // mod check
-                if (roomInfo.room.metadata.moderator_id.indexOf(data.senderid)) {
+                if (roomInfo.room.metadata.moderator_id.indexOf(data.senderid) < 0) {
                     return;
                 }
 
