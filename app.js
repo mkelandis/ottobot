@@ -9,8 +9,8 @@ requirejs.config({
     nodeRequire: require
 });
 
-requirejs(['ttapi', 'autoreconnect', 'bop', 'chat', 'autodj', 'cmd', 'fan', 'queue', 'songlimit'],
-    function(Bot, AutoReconnect, Bop, Chat, AutoDj, Cmd, Fan, Queue, SongLimit) {
+requirejs(['ttapi', 'autoreconnect', 'bop', 'chat', 'autodj', 'cmd', 'fan', 'queue', 'songlimit', 'mood'],
+    function(Bot, AutoReconnect, Bop, Chat, AutoDj, Cmd, Fan, Queue, SongLimit, Mood) {
 
         "use strict";
 
@@ -92,6 +92,13 @@ requirejs(['ttapi', 'autoreconnect', 'bop', 'chat', 'autodj', 'cmd', 'fan', 'que
             userid: userid
         });
         songLimit.run();
+
+        // mood
+        var mood = new Mood({
+            bot: bot,
+            cmd: cmd
+        });
+        mood.run();
 
     });
 
