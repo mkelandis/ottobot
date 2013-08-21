@@ -7,15 +7,17 @@ define(function() {
     var Mood = function(options) {
 
         this.bot = options.bot || options.bot && null;
-        this.userid = options.userid || options.userid && null;
-
+        this.cmd = options.cmd || options.cmd && null;
         this.mood = 0;
-      
+
     };
 
     Mood.prototype.run = function() {
+
+        console.log('mood: started');
+
         var self = this;
-       
+
         this.bot.on('update_votes', function (data) {
             var metadata = data.room.metadata;
             var upvotes = metadata.upvotes;
@@ -24,9 +26,23 @@ define(function() {
 
             self.mood = self.mood + (upvotes - downvotes / listeners);
         });
+
+        this.cmd.registerModCommand('mood', '', 'gauge the mood of the room', function() {
+            self.bot.speak('mood of the room is: ' + self.mood);
+            if (self.isBopping()) {
+                self.bot.speak('The room is bopping');
+            }
+            if (self.isDead()) {
+                self.bot.speak('Get out the defibrillator');
+            }
+            if (self.isCrickets()) {
+                self.bot.speak('chirp chirp chirp');
+            }
+
+        });
     };
 
-    Mood.prototype.isBoping = function() {
+    Mood.prototype.isBopping = function() {
         return this.mood > 0;
     };
 
@@ -38,7 +54,7 @@ define(function() {
         return this.mood < 0;
     };
 
-   
+
 
     return Mood;
 });
