@@ -1,6 +1,6 @@
 /** Copyright 2013 HinterSphere Software <ottobot@hintersphere.com> 
   * MIT LICENSE
-  * https://github.com/mkelandis/ottobot/LICENSE-MIT
+  * https://github.com/mkelandis/ottobot/blob/master/LICENSE-MIT
   */
 /* global require:false */
 /* global process:false */

@@ -25,7 +25,7 @@ Queueing is very basic.
 
 License
 =======
-[MIT License](https://github.com/mkelandis/ottobot/LICENSE-MIT) 
+[MIT License](https://github.com/mkelandis/ottobot/blob/master/LICENSE-MIT) 
 
 Links
 =====
