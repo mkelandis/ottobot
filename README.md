@@ -23,6 +23,10 @@ Known Issues
 This is sort of in beta... the autoreconnect feature isn't re-connecting.  
 Queueing is very basic.
 
+License
+=======
+[MIT License](https://github.com/mkelandis/ottobot/LICENSE-MIT) 
+
 Links
 =====
 https://github.com/alaingilbert/Turntable-API  
